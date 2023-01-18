@@ -32,8 +32,7 @@ wss.on('connection', function connection(ws) {
 
     switch (command) {
       case 'mouse_up':
-        // robot.moveMouse(mouse.x, mouse.y - cord);
-        robot.moveMouse(100, 100);
+        robot.moveMouse(mouse.x, mouse.y - cord);
         ws.send(`${command}_${mouse.y - cord}px`);
         break;
 
